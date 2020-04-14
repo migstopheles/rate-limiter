@@ -1,6 +1,8 @@
 {
   "name": "@travelnest/rate-limiter",
   "version": "0.0.1",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
   "author": {
     "name": "Mike Cook",
     "url": "https://github.com/migstopheles"
