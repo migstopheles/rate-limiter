@@ -1,0 +1,12 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"outDir": "./build",
+		"sourceMap": true,
+		"lib": [
+			"ES2015"
+		]
+	},
+	"include": ["src/"],
+	"exclude": ["src/__tests__/**/*"]
+}
