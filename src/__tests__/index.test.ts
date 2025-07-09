@@ -1,6 +1,8 @@
 import limiter from '../';
 
-jest.useFakeTimers();
+jest.useFakeTimers({
+	legacyFakeTimers: true,
+});
 
 describe('rate-limiter', () => {
 	it('calls limitable functions with args', async () => {
@@ -36,7 +38,7 @@ describe('rate-limiter', () => {
 		const stepToNext = () => {
 			// the two setImmediates allow the timer and the promise function to resolve internally in the limiter
 			return new Promise(setImmediate).then(() => {
-				jest.advanceTimersByTime(LIMIT_TIMER);
+				jest.advanceTimersByTime(LIMIT_TIMER + 100);
 				return new Promise(setImmediate);
 			})
 		};

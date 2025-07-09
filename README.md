@@ -4,12 +4,12 @@ A simple JavaScript rate limiting function. Used to limit the frequency of calls
 
 ## Installation
 
-`npm i @travelnest/rate-limiter`
+`npm i rate-limiter`
 
-## Useage
+## Usage
 
 ```ts
-import limiter from '@travelnest/rate-limiter';
+import limiter from 'rate-limiter';
 
 const limit = limiter(500, 2); // allow 2 concurrent calls every 500ms
 

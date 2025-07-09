@@ -11,7 +11,6 @@ export type Limiter = <F extends Limitable>(fn: F, interval?: number, concurrenc
  * @returns A higher order function, which rate limits calls to the function it wraps
 */
 export default (interval = 1000, concurrency = 1) => {
-
     const pending: Array<Promise<any>> = [];
 
     const limiter: Limiter = (fn) => {

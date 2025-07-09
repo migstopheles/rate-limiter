@@ -1,5 +1,8 @@
-module.exports = {
-	testURL: "http://localhost/",
+/** @type {import('jest').Config} */
+const config = {
+	testEnvironmentOptions: {
+		url: 'http://localhost/'
+	},
 	clearMocks: true,
 	testPathIgnorePatterns: [
 		"<rootDir>/node_modules/",
@@ -15,3 +18,5 @@ module.exports = {
 		"json"
 	]
 }
+
+module.exports = config;
